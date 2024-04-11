@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTO Manager</title>
+    <link rel="stylesheet" href="/styles/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <header>
+        <div id="navbar_container">
+            <a href="/pages/index.html">PTO Manager</a>
+        </div>
+    </header>
+    <main>
+        <div id="signin_container">
+            <form id="signin_form" onsubmit="return signInConfirm()" action="/pages/index.html">
+                <span>Sign In</span>
+                <br>
+
+                <div class="input_box">
+                    <i class='bx bxs-user' ></i>
+                    <input type="email" id="email" placeholder="username@email.com" required>
+                </div>
+                <br>
+
+                <div class="input_box">
+                    <i class='bx bxs-lock-alt' ></i>
+                    <input type="password" id="password" placeholder="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*?&])[a-zA-Z0-9@$!%*?&]{8,}" title="Must contain at least one  number, one uppercase, one lowercase letter, one special character and at least 8 or more characters" required>
+                    <!--Here is regex directly implemented and sepcified. Basically each requirement starts with ?=.* when then we put desired requires inside "[]". First requirement is for at least one lowercase letter, second for one uppercase, third for one number and fourth for one special sign. On the end is requirement in {} which specifies the min lenght of the password-->
+                </div>
+                <br>
+
+                <button type="submit" id="signin_button">Sign In</button>
+            </form>
+        </div>
+    </main>
+</body>
+<script src="/scripts/login.js"></script>
+</html>

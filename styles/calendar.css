@@ -1,0 +1,138 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+.calendar{
+    margin: 10px;
+	background: white;
+	width: 350px;
+    height: 350px;
+	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.preselect_text{
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background: rgb(35, 75, 35);
+    color: white;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.calendar_current{
+    color: white;
+    font-size: 15px;
+    padding-top: 2px
+}
+
+.calendar_top{
+    background: rgb(35, 75, 35);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+i{
+    width: 30px;
+	cursor: pointer;
+	text-align: center;
+	border-radius: 100%;
+	color: white;
+	font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.calendar_weekdays {
+    cursor: default;
+    font-weight: 600;
+}
+
+.calendar_main{
+    margin-top: 10px;
+	position: relative;
+	z-index: 1;
+	cursor: pointer;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.calendar_main ul{
+	list-style: none;
+	flex-wrap: wrap;
+	display: flex;
+	text-align: center;
+}
+
+.calendar_main li{
+    width: calc(100%/7);
+    font-size: 13px;
+}
+
+.calendar_dates{
+    margin: 10px auto 10px auto;
+}
+
+.calendar_dates li {
+	margin: 10px 0 10px 0;;
+	position: relative;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.calendar_dates li.inactive {
+	color: white;
+    visibility: hidden;
+}
+
+.calendar_dates li.active{
+	color: white;
+}
+
+.calendar_dates li.activeInput{
+	color: white;
+}
+
+.calendar_dates li::before {
+	position: absolute;
+	content: "";
+	z-index: -1;
+	top: 50%;
+	left: 50%;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	transform: translate(-47%, -53%);
+}
+
+.calendar_dates li.active::before {
+    background: rgb(35, 75, 35);
+}
+
+.calendar_dates li.activeInput::before {
+    background: rgba(35, 75, 35, 0.75);
+}
+
+.calendar_dates li:not(.active):hover::before {
+    background: rgba(35, 75, 35, 0.35);
+}
+
+@media screen and (max-width: 600px) {
+    .calendar {
+        display: block;
+        height: 300px;
+        width: 300px;
+    }
+
+    .calendar_dates li {
+        display: block;
+        height: 6px;
+    }
+
+    .calendar_dates li::before {
+        transform: translate(-47%, -35%);
+    }
+}

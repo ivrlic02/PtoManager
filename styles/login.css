@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+#navbar_container {
+    background: rgb(35, 75, 35);
+    height: 80px;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 50px;
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    display: inline;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: all 0.25s ease-out;
+}
+
+a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+
+#signin_container {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#signin_form {
+    background: rgb(215, 215, 215);
+    padding: 80px;
+    border-radius: 50px;
+}
+
+span {
+    color: rgb(50, 50, 50);
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+label {
+    color: rgb(50, 50, 50);
+    padding-left: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.input_box input{
+    padding: 10px 13px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+}
+
+.input_box i{
+   position: relative;
+   top: 6px;
+   right: 3px;
+   font-size: 22px;
+   color: rgb(50, 50, 50);
+}
+
+#signin_button {
+    width: 120px;
+    height: 50px;
+    margin: 30px auto 0 auto;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    background-color: rgb(35, 75, 35);
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        min-width: 350px;
+    }
+
+    #navbar_container {
+        padding: 0 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #navbar_container {
+        padding: 0 30px;
+    }
+
+
+    #signin_form {
+        padding: 50px;
+    }
+
+    span {
+        font-size: 25px;
+    }
+
+    label {
+        font-size: 13px;
+    }
+
+    .input_box input {
+        padding: 8px 11px;
+    }
+
+    .input_box i {
+        font-size: 18px;
+    }
+}

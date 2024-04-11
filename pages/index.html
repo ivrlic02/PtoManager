@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTO Manager</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/calendar.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+
+</head>
+<body>
+    <header>
+        <div id="navbar_container">
+            <a href="#">PTO Manager</a>
+            <a href="/pages/login.html" id="signin">Sign in</a>
+        </div>
+    </header>
+
+    <main>
+        <div id="main_container">
+            <div id="select_container">
+                <select id="select_employee" required>
+                    <option hidden value="">Select Employee</option>
+                </select>
+                
+                <div class="calendar">
+                    <p class="preselect_text">Select starting date</p>
+                    <div class="calendar_top" id="top1">
+                        <i class="bx bx-chevron-left prev" id="prev"></i>
+                        <p class="calendar_current" id="current1"></p>
+                        <i class="bx bx-chevron-right next" id="next"></i>
+                    </div>
+                    <div class="calendar_main">
+                        <ul class="calendar_weekdays">
+                            <li>Sun</li>
+                            <li>Mon</li>
+                            <li>Tue</li>
+                            <li>Wed</li>
+                            <li>Thu</li>
+                            <li>Fri</li>
+                            <li>Sat</li>
+                        </ul>
+                        <ul class="calendar_dates" id="dates1"></ul>
+                    </div>    
+                </div>
+
+                <div class="calendar">
+                    <p class="preselect_text">Select ending date</p>
+                    <div class="calendar_top" id="top2">
+                        <i class="bx bx-chevron-left prev" id="prev"></i>
+                        <p class="calendar_current" id="current2"></p>
+                        <i class="bx bx-chevron-right next" id="next"></i>
+                    </div>
+                    <div class="calendar_main">
+                        <ul class="calendar_weekdays">
+                            <li>Sun</li>
+                            <li>Mon</li>
+                            <li>Tue</li>
+                            <li>Wed</li>
+                            <li>Thu</li>
+                            <li>Fri</li>
+                            <li>Sat</li>
+                        </ul>
+                        <ul class="calendar_dates" id="dates2"></ul>
+                    </div>    
+                </div>
+               
+                <button id="select_button">Add PTO</button>
+            </div>
+        </div>
+        <div id="employee_container"></div>
+    </main>
+</body>
+
+<script src= "/scripts/index.js"></script>
+<script src= "/scripts/calendar.js"></script>
+<script src= "/scripts/employee.js"></script>
+
+</html>
